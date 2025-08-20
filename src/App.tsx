@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <div>We are MoneyMind!!!</div>
+      <div style={{color: 'red'}}>We are MoneyMind!!!</div>
     </>
   )
 }
