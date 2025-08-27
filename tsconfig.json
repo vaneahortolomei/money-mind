@@ -20,9 +20,9 @@
     "noUncheckedSideEffectImports": true,
     "erasableSyntaxOnly": true,
 
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@app/*": ["app/*"],
+      "@/*": ["src/*"],
       "@pages/*": ["pages/*"],
       "@widgets/*": ["widgets/*"],
       "@features/*": ["features/*"],
