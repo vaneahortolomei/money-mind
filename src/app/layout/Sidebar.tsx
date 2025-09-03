@@ -1,14 +1,32 @@
-import { NavLink } from '@mantine/core';
-import { Link } from 'react-router-dom';
+import {NavLink, Box} from '@mantine/core';
+import {Link} from 'react-router-dom';
+import {
+    IconLayoutDashboard,
+    IconArrowsLeftRight,
+    IconWallet,
+    IconChartPie,
+    IconSettings,
+} from '@tabler/icons-react';
 
 export function Sidebar() {
+
+    const data = [
+        {icon: IconLayoutDashboard, label: 'Dashboard', link: '/'},
+        {icon: IconArrowsLeftRight, label: 'Transactions', link: '/transactions'},
+        {icon: IconWallet, label: 'Budgets', link: '/budgets'},
+        {icon: IconChartPie, label: 'Analytics', link: '/analytics'},
+        {icon: IconSettings, label: 'Settings', link: '/settings'},
+    ];
+
+    const items = data.map((item) => (
+        <NavLink key={item.label} leftSection={<item.icon size={16} stroke={1.5} color={'#17a34a'}/>} label={item.label}
+                 component={Link} to={item.link}/>
+    ));
+
+
     return (
-        <ul>
-            <NavLink label="Dashboard" component={Link} to="/" />
-            <NavLink label="Transactions" component={Link} to="/transactions" />
-            <NavLink label="Budgets" component={Link} to="/budgets" />
-            <NavLink label="Analytics" component={Link} to="/analytics" />
-            <NavLink label="Settings" component={Link} to="/settings" />
-        </ul>
+        <Box>
+            {items}
+        </Box>
     );
 }

@@ -16,7 +16,7 @@ export default function MainLayout() {
             padding="md"
         >
             <AppShell.Header>
-                <Flex align={"center"} h={'100%'} p={'0 10px'}>
+                <Flex align={"center"} h={'100%'}>
                     <Burger
                         opened={opened}
                         onClick={toggle}
@@ -26,7 +26,7 @@ export default function MainLayout() {
                     <Header />
                 </Flex>
             </AppShell.Header>
-            <AppShell.Navbar><Sidebar /></AppShell.Navbar>
+            <AppShell.Navbar h="100%"><Sidebar /></AppShell.Navbar>
             <AppShell.Main>
                 <Outlet />
             </AppShell.Main>
