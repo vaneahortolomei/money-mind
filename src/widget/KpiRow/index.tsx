@@ -1,4 +1,4 @@
-import {KpiCard} from "./kpi-card.tsx";
+import {KpiCard} from "./components/kpi-card.tsx";
 
 
 export const KpiRow = () => {

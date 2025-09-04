@@ -22,7 +22,7 @@ export const RecentTransaction = () => {
 
     return (
         <Stack>
-            <Title>Transactions</Title>
+            <Title fw={400} fz={18}>Transactions</Title>
             <Table>
                 <Table.Thead>
                     <Table.Tr>
