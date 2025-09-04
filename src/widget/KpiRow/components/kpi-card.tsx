@@ -1,4 +1,4 @@
-import {Flex, Box, Text, Card, Grid} from '@mantine/core';
+import {Flex, Box, Text, Card, Grid, useMantineTheme} from '@mantine/core';
 import {IconArrowDownRight, IconArrowUpRight, IconCurrencyDollar, IconPigMoney} from "@tabler/icons-react";
 import type {ReactElement} from "react";
 
@@ -11,26 +11,26 @@ interface CardData  {
 
 const cardData:  CardData[] = [
     {
-        icon: <IconCurrencyDollar size={22} color={'black'}/>,
+        icon: <IconCurrencyDollar size={22} color={'#424950'}/>,
         title: 'Total Balance',
         int: `$${8500}`,
         hint: ''
 
     },
     {
-        icon: <IconArrowUpRight size={22} color={'#17a34a'}/>,
+        icon: <IconArrowUpRight size={22} color={'#34d399'}/>,
         title: 'Income This Month',
         int: `$${8500}`,
         hint: ''
     },
     {
-        icon: <IconArrowDownRight size={22} color={'red'}/>,
+        icon: <IconArrowDownRight size={22} color={'#dc2626'}/>,
         title: 'Expenses This Month',
         int: `$${8500}`,
         hint: ''
     },
     {
-        icon: <IconPigMoney size={22} color={'purple'}/>,
+        icon: <IconPigMoney size={22} color={'#60a5fa'}/>,
         title: 'Savings',
         int: `${60}%`,
         hint: ''
@@ -38,6 +38,10 @@ const cardData:  CardData[] = [
 ]
 
 export const KpiCard = () => {
+    const theme = useMantineTheme();
+    // const green400 = theme.colors.brandGreen[4];
+    const gray700 = theme.colors.brandGray[7];
+
     return (
         <>
             {
@@ -47,8 +51,8 @@ export const KpiCard = () => {
                             <Flex gap={10}>
                                 <Box mt={2}>{card.icon}</Box>
                                 <Box>
-                                    <Text fz={16} >{card.title}</Text>
-                                    <Text fw={600} c={'#17a34a'}>{card.int}</Text>
+                                    <Text fz={16} c={gray700}>{card.title}</Text>
+                                    <Text fw={600} c={gray700}>{card.int}</Text>
                                 </Box>
                             </Flex>
                         </Card>

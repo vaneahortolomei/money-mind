@@ -22,7 +22,7 @@ const chartData: ChartDataValues[] = [
     {
         name: 'Transporting',
         value: 40,
-        color: 'gray'
+        color: 'red'
     },
     {
         name: 'Entertainment',
@@ -40,7 +40,7 @@ const chartData: ChartDataValues[] = [
 export const SpendingPie = () => {
     return (
         <Stack>
-            <Title>Budgets</Title>
+            <Title fw={400} fz={18}>Budgets</Title>
             <PieChart key={'1'} data={chartData} withTooltip tooltipDataSource="segment" mx="auto"/>
             <List>
                 {chartData.map((item) => (

@@ -7,6 +7,7 @@ import {
     IconChartPie,
     IconSettings,
 } from '@tabler/icons-react';
+import {AppShell} from "@mantine/core";
 
 export function Sidebar() {
 
@@ -19,14 +20,16 @@ export function Sidebar() {
     ];
 
     const items = data.map((item) => (
-        <NavLink key={item.label} leftSection={<item.icon size={16} stroke={1.5} color={'#17a34a'}/>} label={item.label}
+        <NavLink key={item.label} leftSection={<item.icon size={16} stroke={1.5} color={'#34d399'}/>} label={item.label}
                  component={Link} to={item.link}/>
     ));
 
 
     return (
-        <Box>
-            {items}
-        </Box>
+        <AppShell.Navbar h="100%">
+            <Box pt={20}>
+                {items}
+            </Box>
+        </AppShell.Navbar>
     );
 }

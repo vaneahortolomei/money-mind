@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import MainLayout from './layout/MainLayout';
+import Layout from './layout/layout.tsx';
 import { Dashboard } from '../pages/Dashboard.tsx';
 import { Transactions } from '../pages/Transactions.tsx';
 import { Analytics } from '../pages/Analytics.tsx';
@@ -10,7 +10,7 @@ import { Settings } from '../pages/Settings.tsx';
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <MainLayout />,
+        element: <Layout />,
         children: [
             { index: true, element: <Dashboard /> },
             { path: 'transactions', element: <Transactions /> },

@@ -1,14 +1,13 @@
-import {Stack, Title, Grid, Box} from '@mantine/core';
-import {KpiRow} from "../widget/KpiRow/kpi-row.tsx";
-import {FlowChart} from "../widget/FlowChart/flow-chart.tsx";
-import {RecentTransaction} from "../widget/RecentTransactions/recent-transaction.tsx";
-import {Goals} from "../widget/Goals/goals.tsx";
-import {SpendingPie} from "../widget/SpendingPie/spending-pie.tsx";
+import {Stack, Grid, Box} from '@mantine/core';
+import {KpiRow} from "../widget/KpiRow";
+import {FlowChart} from "../widget/FlowChart";
+import {RecentTransaction} from "../widget/RecentTransactions";
+import {Goals} from "../widget/Goals";
+import {SpendingPie} from "../widget/SpendingPie";
 
 export const Dashboard = () => {
     return (
         <Stack>
-            <Title order={1}>Dashboard</Title>
             <Grid>
                 <KpiRow/>
             </Grid>
